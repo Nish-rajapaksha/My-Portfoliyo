@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>case_3</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+
+        section{
+            height: 100vh;
+            position: relative;
+        }
+        main>div:nth-child(4){
+            position: fixed;
+            width: 340px;
+            height: 340px;
+            border-radius: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 20px solid saddlebrown;
+        }
+
+        main>div:nth-child(5){
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 20px solid red;
+        }
+
+        main>section>div{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+
+        }
+        main>section:nth-child(1)>div{
+            background-color: purple;
+        }
+        main>section:nth-child(2)>div{
+            background-color: deepskyblue;
+        }
+        main>section:nth-child(3)>div{
+            background-color: indianred;
+        }
+        main>section:nth-child(1)>div>h1{
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            text-align: center;
+            color: white;
+        }
+        main>section:nth-child(2)>div>h1{
+            position: absolute;
+            left: 28%;
+            top: 30%;
+            text-align: center;
+            color: white;
+        }
+        main>section:nth-child(3)>div>h1{
+            position: absolute;
+            left: 25%;
+            top: 20%;
+            text-align: center;
+            color: white;
+         }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div>
+            <h1>Hello</h1>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Welcome to</h1>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Institute<br>of<br>Software<br>Engineering</h1>
+        </div>
+    </section>
+    <div></div>
+    <div></div>
+</main>
+</body>
+</html>
