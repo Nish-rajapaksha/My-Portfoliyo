@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>case-1</title>
+    <style>
+        div {
+            width: 180px;
+            height: 80px;
+            border-radius: 10px;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        @keyframes my-animation {
+            0% {
+                background: yellow;
+                margin: 0px 0px 0px 0px;
+            }
+            25% {
+                background: blue;
+                margin: 0px 0px 0px 500px;
+                transform: rotate(90deg);
+
+            }
+            50% {
+                background: orangered;
+                margin: 400px 0px 0px 500px;
+                transform: rotate(180deg);
+
+            }
+            75% {
+                background: red;
+                margin: 400px 0px 0px 0px;
+                transform: rotate(270deg);
+
+            }
+            100% {
+                background: deeppink;
+                margin: 0px 0px 0px 0px;
+                transform: rotate(360deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+</div>
+
+</body>
+</html>
+
+
