@@ -11,108 +11,70 @@
     <link rel="StyleSheet" href="css/normalize.css">
     <link rel="StyleSheet" href="css/StyleSheet.css">
 </head>
-<body>
-<header>
+<header id="Home">
+    <!--nav bar-->
     <nav>
-
+       
         <ul>
-            <li>Home</li>
-            <li>Discover me</li>
-            <li>Education</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Goal</li>
-            <li>Contact Me</li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Discover me">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#EndGoal">Goal</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
 
+
+    <div class="main-container">
+        <div class="profile-photo">
+            <img src="assets/AAD_8670.JPG%20(1).webp">
+        </div>
+        <div class="main-text"><h1>Welcome to My Profile</h1>
+        <h1>Nishadi Rajapaksha</h1>
+            <h5>(1st Year student at IJSE</h5>
+
+        </div>
+    </div>
+
+
 </header>
-<main>
-    <section>
-        <article>
-
-        </article>
-        <nav>
-
-        </nav>
-
-    </section>
-    <section>
-
-        <h1></h1>
-        <article></article>
-        <nav></nav>
-    </section>
-    <section>
-        <h1></h1>
-        <h2>
-        </h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
 
 
-    </section>
-    <section>
-        <h1></h1>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
+<body>
+    <main>
 
-        <h1></h1>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur soluta saepe
+     expedita inventore ratione perferendis sed corporis, odio itaque facere nisi earum totam 
+     sit suscipit assumenda illum fuga consequatur! Reiciendis.</p>
 
-
-    </section>
-    <section>
-        <h1></h1>
-        <h3></h3>
-
-        <nav></nav>
-        <nav></nav>
-        <nav></nav>
-        <nav></nav>
-        <nav></nav>
-
-    </section>
-    <section>
-        <h1></h1>
-        <h3></h3>
-        <h3></h3>
-        <h3></h3>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur soluta saepe
+        expedita inventore ratione perferendis sed corporis, odio itaque facere nisi earum totam 
+        sit suscipit assumenda illum fuga consequatur! Reiciendis.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur soluta saepe
+            expedita inventore ratione perferendis sed corporis, odio itaque facere nisi earum totam 
+            sit suscipit assumenda illum fuga consequatur! Reiciendis.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur soluta saepe
+                expedita inventore ratione perferendis sed corporis, odio itaque facere nisi earum totam 
+                sit suscipit assumenda illum fuga consequatur! Reiciendis.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur soluta saepe
+                    expedita inventore ratione perferendis sed corporis, odio itaque facere nisi earum totam 
+                    sit suscipit assumenda illum fuga consequatur! Reiciendis.</p>
+                          
 
 
 
-
-    </section>
-    <section>
-        <aside>
-            <h1></h1>
-        </aside>
+    </main>
 
 
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <h2></h2>
-        <nav></nav>
-    </section>
+    <script type="text/javascript">
 
-</main>
-<footer>
-<aside>
-    <address>
-        
-    </address>
-</aside>
-</footer>
+/*scroll navbar */
+window.addEventListener("scroll",function(){
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("sticky",window.scrollY > 0);
+})
+    </script>
 </body>
 </html>

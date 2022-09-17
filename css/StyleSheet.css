@@ -1,24 +1,81 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-header{
-    background-color: black;
-    height: 60px;
-
+header {
+    height: 100vh;
+    background-image: url(../assets/v1016-b-08.jpg);
 }
-header>nav>ul{
+
+nav {
     display: flex;
     justify-content: end;
+    width: 100vw;
+    padding-top: 10px;
+    padding-left: -3%;
+    padding-right: 12%;
+    position: fixed;
+    z-index: 5;
+}
+nav > ul {
+    margin-top:8px;
+}
+
+
+nav > ul > li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 25px;
+    z-index: 7;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+nav > ul > li > a:hover {
+    color: burlywood;
+    transition: 0.3s;
+}
+.sticky {
+    height: 50px;
+    background:black;
+    transition: 0.3s;
+}
+
+
+.main-container {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: flex;
+}
+.main-text{
+    width: 50%;
+    height: 100%;
+    color: #e5e5e5;
+
+}
+.profile-photo{
+    width: 50%;
+    height: 100%;
 
 
 }
-header>nav>ul>li{
-    list-style: none;
-    margin-right: 18px;
-    font-size: 20px;
-    color:white;
-    margin-top: 10px;
+.profile-photo>img{
+    width: 300px;
+    height:325px;
+    border-radius:120px;
+    border: 5px solid #000000;
+
+
 }
