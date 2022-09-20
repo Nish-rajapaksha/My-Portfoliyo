@@ -145,6 +145,8 @@ nav > ul > li > a:hover {
 
 }
 #discoverMe>div{
+    display: flex;
+    justify-content: center;
     background-color: black;
     width: 400px;
     text-align: center;
@@ -155,5 +157,16 @@ nav > ul > li > a:hover {
 }
 #discoverMe>div>h1{
     color: #e5e5e5;
+
+}
+#discoverMe>p{
+    width: 80%;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+
 }
 
