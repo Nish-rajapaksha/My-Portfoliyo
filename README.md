@@ -10,3 +10,13 @@ https://wireframe.cc/pro/pp/37d8dd764563067
 
 Mock-up URL :
 https://www.figma.com/file/BKrc1N7YcIglZpsaCfmkUy/My-Profile?node-id=0%3A1
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+SPA/JavaSript Application
+
+Wire-Frame :
+https://wireframe.cc/pro/edit/582901
+
+Mock-Up :
+https://www.figma.com/file/YRJ2S3sODfI784KPhLw0xW/Pos_SPA?node-id=1%3A2
