@@ -19,4 +19,4 @@ Wire-Frame :
 https://wireframe.cc/pro/edit/582901
 
 Mock-Up :
-
+https://www.figma.com/file/YRJ2S3sODfI784KPhLw0xW/Pos_SPA?node-id=1%3A2
