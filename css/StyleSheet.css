@@ -101,9 +101,11 @@ nav > ul > li > a:hover {
 
 }
 
-.main-text > div > h5 {
+.main-text>div>h5{
     color: #e5e5e5;
     font-size: 15px;
+    position: absolute;
+    justify-content: end;
 }
 
 .main-text > div {
