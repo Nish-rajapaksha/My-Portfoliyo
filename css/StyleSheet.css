@@ -155,7 +155,13 @@ nav > ul > li > a:hover {
     color:black;
     position: absolute;
     left: 2%;
-    top: 10%;
+    top: 6%;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    text-shadow: 2px 2px #ff0000;
 
 
 }
@@ -167,7 +173,7 @@ nav > ul > li > a:hover {
     bottom: 0;
     top: 0;
     margin: auto;
-    padding-top: 10%;
+    padding-top: 15%;
     height: 30px;
     font-size: 18px;
 
@@ -176,7 +182,7 @@ nav > ul > li > a:hover {
     /*position: relative;*/
     width: 334px;
     height: 247px;
-    right: 876px;
+    /*right: 876px;*/
     top: 1497px;
 }
 #educationContain{
