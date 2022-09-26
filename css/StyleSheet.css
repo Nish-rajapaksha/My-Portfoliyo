@@ -200,7 +200,73 @@ nav > ul > li > a:hover {
     width: 75%;
     height: 95%;
 }
+#skills {
+    height: 80vh;
+    border: 2px solid black;
+    position: relative;
+}
 
+#skills > h1 {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-size: 56px;
+    font-family: "Iskoola Pota";
+    text-shadow: 2px 2px #807c7c;
+    z-index: 1;
+}
+
+.skill-contain {
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    top: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-contain > div {
+    height: 30%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-img > div {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.skill-img > div > img {
+    position: absolute;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.skill-contain > div:nth-child(2) > h2 {
+    margin-left: 40%;
+}
+
+.skill-contain > div:nth-child(3) {
+    height: 30%;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-contain > div:nth-child(3) > div {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    background: red;
+}
 
 
 
