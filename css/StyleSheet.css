@@ -282,6 +282,21 @@ nav > ul > li > a:hover {
     text-shadow: 2px 2px #807c7c;
     z-index: 1;
 }
+#endGoal {
+    height: 80vh;
+    border: 2px solid black;
+    position: relative;
+}
+
+#endGoal>img{
+    width: 55%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
 
 
 
