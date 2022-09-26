@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
@@ -7,7 +7,7 @@ header {
     height: 100vh;
     background-image: url(../assets/v1016-b-08.jpg);
     background-position: center;
-    background-size:cover;
+    background-size: cover;
 }
 
 nav {
@@ -24,7 +24,6 @@ nav {
 nav > ul {
     margin-top: 8px;
 }
-
 
 nav > ul > li {
     list-style: none;
@@ -51,7 +50,6 @@ nav > ul > li > a:hover {
     transition: 0.3s;
 }
 
-
 .main-container {
     width: 80%;
     height: 80%;
@@ -66,17 +64,16 @@ nav > ul > li > a:hover {
 
 .main-text {
     width: 50%;
-    top: 23%;
+    top: 36%;
     position: relative;
-
+    left: 4%;
+    height: 76%;
 }
 
 .profile-photo {
     width: 50%;
     position: relative;
     top: 25%;
-
-
 }
 
 .profile-photo > img {
@@ -84,8 +81,6 @@ nav > ul > li > a:hover {
     height: 325px;
     border-radius: 120px;
     border: 5px solid #000000;
-
-
 }
 
 .main-text > div > h1:nth-child(1) {
@@ -103,11 +98,12 @@ nav > ul > li > a:hover {
 
 }
 
-.main-text>div>h5{
+.main-text > div > h5 {
     color: #e5e5e5;
     font-size: 15px;
     position: absolute;
     justify-content: end;
+    margin-left: 40%;
 }
 
 .main-text > div {
@@ -117,38 +113,39 @@ nav > ul > li > a:hover {
     bottom: 0;
     top: 0;
     margin: auto;
-
 }
 
-.profile-photo>button {
+.profile-photo > button {
     background-color: #2C2C2C;
     border-color: black;
     width: 130px;
     height: 40px;
 }
-.profile-photo>div{
-    width:100%;
-    height:80px;
+
+.profile-photo > div {
+    width: 100%;
+    height: 80px;
     display: flex;
-    margin-top:20px;
-    position:absolute;
-    margin-left:-50px;
+    margin-top: 20px;
+    position: absolute;
+    margin-left: -50px;
 }
-.profile-photo>div>li>a>img{
+
+.profile-photo > div > li > a > img {
     width: 50px;
     height: 40px;
 }
 
-.profile-photo>div>li{
+.profile-photo > div > li {
     list-style: none;
     margin-left: 10px;
-
 }
+
 #discoverMe {
-    height: 80vh;
+    height: 100vh;
     border: 2px solid black;
     position: relative;
-    background: rgba(0, 0, 0, 40%);
+    background: rgba(0, 0, 0, 37%);
 }
 
 #discoverMe > h1 {
@@ -177,8 +174,9 @@ nav > ul > li > a:hover {
     bottom: 0;
     right: 0;
 }
+
 #education {
-    height: 80vh;
+    height: 100vh;
     border: 2px solid black;
     position: relative;
 }
@@ -200,8 +198,9 @@ nav > ul > li > a:hover {
     width: 75%;
     height: 95%;
 }
+
 #skills {
-    height: 80vh;
+    height: 100vh;
     border: 2px solid black;
     position: relative;
 }
@@ -265,10 +264,11 @@ nav > ul > li > a:hover {
     width: 120px;
     height: 120px;
     position: relative;
-    background: red;
+
 }
+
 #project {
-    height: 80vh;
+    height: 100vh;
     border: 2px solid black;
     position: relative;
 }
@@ -282,8 +282,9 @@ nav > ul > li > a:hover {
     text-shadow: 2px 2px #807c7c;
     z-index: 1;
 }
+
 #endGoal {
-    height: 80vh;
+    height: 100vh;
     border: 2px solid black;
     position: relative;
 }
@@ -297,6 +298,29 @@ nav > ul > li > a:hover {
     top: 0;
     margin: auto;
 }
+
+
+
+footer {
+    position: relative;
+    height: 100vh;
+    background: black;
+}
+footer > h1 {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-size: 56px;
+    font-family: "Iskoola Pota";
+    text-shadow: 2px 2px #807c7c;
+    color: white;
+}
+
+
+
+
+
+
 
 
 
