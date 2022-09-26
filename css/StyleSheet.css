@@ -267,6 +267,22 @@ nav > ul > li > a:hover {
     position: relative;
     background: red;
 }
+#project {
+    height: 80vh;
+    border: 2px solid black;
+    position: relative;
+}
+
+#project > h1 {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-size: 56px;
+    font-family: "Iskoola Pota";
+    text-shadow: 2px 2px #807c7c;
+    z-index: 1;
+}
+
 
 
 
