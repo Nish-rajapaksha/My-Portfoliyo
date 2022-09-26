@@ -144,88 +144,40 @@ nav > ul > li > a:hover {
     margin-left: 10px;
 
 }
-#discoverMe{
+#discoverMe {
     height: 80vh;
-    border-color: black;
-    width: 100%;
+    border: 2px solid black;
     position: relative;
+    background: rgba(0, 0, 0, 40%);
 }
 
-#discoverMe>h1{
-    color:black;
+#discoverMe > h1 {
     position: absolute;
-    left: 2%;
-    top: 6%;
-    font-family: 'Impact';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 78px;
-    text-shadow: 2px 2px #ff0000;
-
-
+    top: 8%;
+    left: 5%;
+    font-size: 56px;
+    font-family: "Iskoola Pota";
+    text-shadow: 3px 3px #e0dddd;
 }
-#discoverMe>p{
-    width: 80%;
-    position: relative;
-    right: 0;
-    left: 0;
+
+.discoverMe-contain {
+    position: absolute;
+    width: 60%;
+    top: 28%;
+    left: 20%;
+}
+
+.discoverMe-contain > p {
+    font-size: 22px;
+}
+
+#discoverMe > img {
+    width: 18%;
+    position: absolute;
     bottom: 0;
-    top: 0;
-    margin: auto;
-    padding-top: 15%;
-    height: 30px;
-    font-size: 18px;
-
-}
-#discoverMe>img{
-    /*position: relative;*/
-    width: 334px;
-    height: 247px;
-    /*right: 876px;*/
-    top: 1497px;
-}
-#educationContain{
-    height: 80vh;
-}
-.educationC{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    width: 400px;
-    text-align: center;
-    position: relative;
-    left: 35%;
-    height:60px;
-    padding-top: 40px;
-}
-.educationC>h1{
-    color: #e5e5e5;
+    right: 0;
 }
 
-#Skills{
-    height: 80vh;
-    border-color: black;
-    width: 100%;
-}
-.SkillsH{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    width: 400px;
-    text-align: center;
-    position: relative;
-    left: 35%;
-    height:60px;
-
-
-}
-.SkillsH>h1{
-    color:#e5e5e5;
-    margin-top: 0;
-    margin-bottom: 0;
-
-}
 
 
 
