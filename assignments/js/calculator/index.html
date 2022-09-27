@@ -18,11 +18,53 @@
       top: 0;
       margin: auto;
     }
+    .topD{
+      width:100%;
+      height:30%;
+      position: relative;
+
+    }
+    .bottomD{
+      width: 100%;
+      height: 70%;
+
+    }
+    #display{
+      width: 80%;
+      height: 60%;
+    }
+
   </style>
 </head>
 <body>
 <section class="bg-dark"style="width: 100vw;height: 100vh">
-  <aside></aside>
+  <aside>
+
+    <div class="topD" >
+      <input id="display" class="position-absolute top-50 start-50 translate-middle">
+    </div>
+    <div class="bottomD">
+      <button type="button" class="btn btn-outline-dark">7</button>
+      <button type="button" class="btn btn-outline-dark">8</button>
+      <button type="button" class="btn btn-outline-dark">9</button>
+      <button type="button" class="btn btn-outline-dark">+</button><br>
+      <button type="button" class="btn btn-outline-dark">6</button>
+      <button type="button" class="btn btn-outline-dark">5</button>
+      <button type="button" class="btn btn-outline-dark">4</button>
+      <button type="button" class="btn btn-outline-dark">-</button><br>
+      <button type="button" class="btn btn-outline-dark">3</button>
+      <button type="button" class="btn btn-outline-dark">2</button>
+      <button type="button" class="btn btn-outline-dark">1</button>
+      <button type="button" class="btn btn-outline-dark">*</button><br>
+      <button type="button" class="btn btn-outline-dark">0</button>
+      <button type="button" class="btn btn-outline-dark">.</button>
+      <button type="button" class="btn btn-outline-dark">=</button>
+      <button type="button" class="btn btn-outline-dark">%</button><br>
+      <button type="button" class="btn btn-outline-dark">Clear</button>
+
+
+    </div>
+  </aside>
 
 
 </section>
