@@ -193,8 +193,9 @@ nav > ul > li > a:hover {
     background-color: black;
     color: white;
     border: 2px solid #f61212;
-    margin-top: 75%;
-    margin-left: 50%;
+    margin-top: 35%;
+    margin-left: 60%;
+
 
 }
 #discoverMe>button:hover{
