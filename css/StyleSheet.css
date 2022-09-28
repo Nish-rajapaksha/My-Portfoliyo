@@ -188,12 +188,14 @@ nav > ul > li > a:hover {
     right: 18px;
 }
 #discoverMe>button{
-    background-color: #090808;
-    border-color: #af0606;
-    width: 230px;
     height: 40px;
-    bottom: 0;
-    right: 0;
+    width: 150px;
+    background-color: black;
+    color: white;
+    border: 2px solid #f61212;
+    margin-top: 75%;
+    margin-left: 50%;
+
 }
 #discoverMe>button>h3{
     color: #e5e5e5;
