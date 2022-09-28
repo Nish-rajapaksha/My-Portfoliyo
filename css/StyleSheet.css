@@ -415,6 +415,11 @@ footer {
     font-size: 15px;
 
 }
+.sendD>button:hover{
+    cursor:pointer;
+    transform: scale(1.2);
+}
+/* project part css */
 
 #projects_topic {
     height: 90vh;
