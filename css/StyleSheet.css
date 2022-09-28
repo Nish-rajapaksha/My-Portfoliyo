@@ -290,7 +290,7 @@ nav > ul > li > a:hover {
     position: relative;
 
 }
-
+/* project part text css */
 #project {
     height: 100vh;
     border: 4px solid black;
@@ -308,7 +308,7 @@ nav > ul > li > a:hover {
     z-index: 1;
     color: #ffffff;
 }
-
+/* end goal part css */
 #endGoal {
     height: 100vh;
     border: 2px solid black;
@@ -324,6 +324,9 @@ nav > ul > li > a:hover {
     bottom: 0;
     top: 0;
     margin: auto;
+    position:center;
+    display: flex;
+
 }
 
 
