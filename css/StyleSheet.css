@@ -118,13 +118,17 @@ nav > ul > li > a:hover {
 }
 
 .profile-photo > button {
-    background-color: #2C2C2C;
+    background-color: #878383;
     border-color: black;
     width: 130px;
     height: 40px;
+    font-family: "Cambria Math";
+    font-weight: bold;
 }
 .profile-photo>button:hover{
     transform: scale(1.2);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .profile-photo > div {
