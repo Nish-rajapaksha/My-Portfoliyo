@@ -194,13 +194,13 @@ nav > ul > li > a:hover {
     color: white;
     border: 2px solid #f61212;
     margin-top: 35%;
-    margin-left: 60%;
+    margin-left: 55%;
 
 
 }
 #discoverMe>button:hover{
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.4);
     transition: 0.3s;
 }
 #discoverMe>button>h3{
