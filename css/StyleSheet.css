@@ -195,8 +195,6 @@ nav > ul > li > a:hover {
     border: 2px solid #f61212;
     margin-top: 35%;
     margin-left: 55%;
-    display: flex;
-    justify-content: center;
 
 
 
@@ -206,8 +204,11 @@ nav > ul > li > a:hover {
     transform: scale(1.4);
     transition: 0.3s;
 }
-#discoverMe>button>h3{
+#discoverMe>button>a{
     color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    /*text-decoration: none;*/
 }
 /*             education part css        */
 #education {
