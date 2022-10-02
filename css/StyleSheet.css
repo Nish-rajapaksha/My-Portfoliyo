@@ -551,7 +551,13 @@ footer {
 .slide>a>button:hover{
     transform: scale(1.2);
 }
-
+footer>h4{
+    display: flex;
+    margin-top: 44%;
+    margin-left: 48%;
+    position: absolute;
+    color: white;
+}
 
 
 
