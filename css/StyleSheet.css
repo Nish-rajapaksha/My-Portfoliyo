@@ -196,6 +196,7 @@ nav > ul > li > a:hover {
     margin-top: 35%;
     margin-left: 55%;
     display: flex;
+    justify-content: center;
 
 
 
