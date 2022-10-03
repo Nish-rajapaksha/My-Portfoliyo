@@ -499,12 +499,12 @@ footer {
     background-color: #892424;
     display: grid;
     place-items: center;
+    background-size: cover;
+    position: center;
+
 }
 
-#slider-container #slider .slide span {
-    color: white;
-    font-size: 150px;
-}
+
 
 @media only screen and (min-width: 1100px) {
 
@@ -537,6 +537,7 @@ footer {
     }
 
 }
+
 
 footer>h4{
     display: flex;
