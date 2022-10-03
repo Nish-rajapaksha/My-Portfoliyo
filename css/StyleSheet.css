@@ -501,7 +501,16 @@ footer {
     place-items: center;
     background-size: cover;
     position: center;
+}
+.slide>a>button{
+    background-color: #6f6c6c;
 
+}
+.slide>a>button:hover{
+    cursor: pointer;
+}
+#slider-container #slider .slide:nth-child(1){
+    background-image: url("../assets/project/Screenshot 2022-10-03 211719.png");
 }
 
 
