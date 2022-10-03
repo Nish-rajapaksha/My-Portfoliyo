@@ -453,6 +453,7 @@ footer {
     height: 300px;
     width: 85vw;
     max-width: 1400px;
+
     position: relative;
     overflow: hidden;
     padding: 20px;
@@ -463,6 +464,8 @@ footer {
     top: calc(50% - 30px);
     height: 30px;
     width: 30px;
+    border-left: 8px solid #403a3a;
+    border-top: 8px solid #403a3a;
 }
 
 #slider-container .btn:hover {
@@ -494,7 +497,6 @@ footer {
     height: 90%;
     margin: auto 10px;
     background-color: #a847a4;
-    box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
     display: grid;
     place-items: center;
 }
@@ -535,7 +537,6 @@ footer {
     }
 
 }
-
 
 footer>h4{
     display: flex;
