@@ -512,6 +512,9 @@ footer {
 #slider-container #slider .slide:nth-child(1){
     background-image: url("../assets/project/Screenshot 2022-10-03 211719.png");
 }
+#slider-container #slider .slide:nth-child(2){
+    background-image: url("../assets/project/2022-10-06.png");
+}
 
 
 
