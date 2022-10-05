@@ -521,7 +521,9 @@ footer {
 #slider-container #slider .slide:nth-child(4){
     background-image: url("../assets/project/2022-10-06 (1).png");
 }
-
+#slider-container #slider .slide:nth-child(5){
+    background-image: url("../assets/project/2022-10-06 (3).png");
+}
 
 
 @media only screen and (min-width: 1100px) {
