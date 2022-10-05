@@ -513,7 +513,13 @@ footer {
     background-image: url("../assets/project/Screenshot 2022-10-03 211719.png");
 }
 #slider-container #slider .slide:nth-child(2){
+    background-image: url("../assets/project/2022-10-06 (2).png");
+}
+#slider-container #slider .slide:nth-child(3){
     background-image: url("../assets/project/2022-10-06.png");
+}
+#slider-container #slider .slide:nth-child(4){
+    background-image: url("../assets/project/2022-10-06 (1).png");
 }
 
 
