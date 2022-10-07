@@ -191,6 +191,7 @@ nav > ul > li > a:hover {
     position: absolute;
     bottom: 0;
     right: 18px;
+    align-self: self-start;
 }
 #discoverMe>button{
     height: 40px;
