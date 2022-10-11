@@ -537,6 +537,15 @@ footer {
 #slider-container #slider .slide:nth-child(9){
     background-image: url("../assets/project/Screenshot 2022-10-11 224440.png");
 }
+#slider-container #slider .slide:nth-child(10){
+    background-image: url("../assets/project/Screenshot 2022-10-11 224633.png");
+}
+#slider-container #slider .slide:nth-child(11){
+    background-image: url("../assets/project/im.png");
+}
+#slider-container #slider .slide:nth-child(12){
+    background-image: url("../assets/project/rw.png");
+}
 @media only screen and (min-width: 1100px) {
 
     #slider-container #slider .slide {
