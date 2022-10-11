@@ -549,6 +549,9 @@ footer {
 #slider-container #slider .slide:nth-child(13){
     background-image: url("../assets/project/cal.png");
 }
+#slider-container #slider .slide:nth-child(13){
+    background-image: url("../assets/project/pos.png");
+}
 @media only screen and (min-width: 1100px) {
 
     #slider-container #slider .slide {
