@@ -1,57 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <style>
+
+        #homeContent {
+            width: 100%;
+            height: 250px;
+        }
+
+        #homeContent > section {
+            height: 100%;
+        }
+
+        #homeContent > section > div {
+            height: 100%;
+        }
+
+        .control-error {
+            color: red;
+            font-size: 0.9em;
+            /*display: none;*/
+        }
+
+    </style>
 
 </head>
 <body>
-<section>
+
+<section class="row-12">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" style="margin-left: 70%" href="#">POS System</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand" href="#">POS System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <li class="nav-item1">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active " href="pages/customer.html">Customer</a>
+                    <li class="nav-item2">
+                        <a class="nav-link active" aria-current="page" href="#">Customer</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pages/item.html">Item</a>
+                    <li class="nav-item3">
+                        <a class="nav-link active" href="#">Item</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pages/placeOrder.html">Place a Order</a>
+                    <li class="nav-item4">
+                        <a class="nav-link active" href="#">Place order</a>
                     </li>
+
                 </ul>
+
             </div>
         </div>
     </nav>
 </section>
+
 <!--Home-->
-<section class="container-fluid" style="margin-top: 10%">
-    <aside class="row container-fluid justify-content-around">
-        <div class="col-md-2 border border-3 border border-secondary mx-1 position-relative bg-info" style= "width:340px;height:190px;">
-            <h3>Customer :</h3>
-            <h5 class ="position-absolute top-50 start-50 translate-middle fs-1">05</h5>
+<section class="container-fluid mt-5" id="homeContent">
+    <section class="row container-fluid justify-content-around">
+        <div class=" col-md-2 border border-3 border border-secondary mx-1 position-relative">
+            <i class="fa-solid fa-user position-absolute top-0 start-50 translate-middle-x fs-1 mt-5"></i>
+            <h3 class="position-absolute top-50 start-50 translate-middle">05</h3>
+            <h4 class="position-absolute bottom-0 start-50 translate-middle-x my-5">Customer</h4>
         </div>
-        <div class="col-md-2 border border-3 border border-secondary mx-1 position-relative bg-info" style= "width:340px;height:190px;">
-            <h3>Item :</h3>
-            <h5 class = "position-absolute top-50 start-50 translate-middle fs-1">05</h5>
+        <div class=" col-md-2 border border-3 border border-secondary mx-1 position-relative">
+            <i class="fa-solid fa-boxes-stacked position-absolute top-0 start-50 translate-middle-x fs-1 mt-5"></i>
+            <h3 class="position-absolute top-50 start-50 translate-middle">05</h3>
+            <h4 class="position-absolute bottom-0 start-50 translate-middle-x my-5">Item</h4>
         </div>
-        <div class="col-md-2 border border-3 border border-secondary mx-1 position-relative bg-info" style= "width:340px;height:190px;">
-            <h3>Orders :</h3>
-            <h5 class="position-absolute top-50 start-50 translate-middle fs-1" >05</h5>
-
+        <div class=" col-md-2 border border-3 border border-secondary mx-1 position-relative">
+            <i class="fa-solid fa-cart-shopping position-absolute top-0 start-50 translate-middle-x fs-1 mt-5"></i>
+            <h3 class="position-absolute top-50 start-50 translate-middle">05</h3>
+            <h4 class="position-absolute bottom-0 start-50 translate-middle-x my-5">Order</h4>
         </div>
-    </aside>
-
-
+    </section>
 </section>
+
 <!--customer-->
 <section class="container-fluid mt-3" id="customerContent">
 
@@ -70,31 +106,37 @@
             <div class="mb-3">
                 <label class="form-label" for="txtCusID">Customer ID</label>
                 <input class="form-control" id="txtCusID" placeholder="Customer ID" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCusName">Customer Name</label>
                 <input class="form-control" id="txtCusName" placeholder="Customer Name" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCusAddress">Customer Address</label>
                 <input class="form-control" id="txtCusAddress" placeholder="Customer Address" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtCusPn">phone number</label>
                 <input class="form-control" id="txtCusPn" placeholder="phone number" type="text">
+                <span class="control-error"></span>
             </div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-primary me-md-2" id="btnSaveCustomer">Save</button>
                 <button class="btn btn-success me-md-2" id="btnUpdateCustomer">Update</button>
                 <button class="btn btn-danger me-md-2" id="btnDeleteCustomer">Delete</button>
+                <button class="btn bg-warning me-md-2" id="btnClearCustomer">Clear</button>
+
             </div>
         </div>
     </section>
     <section class="row mt-4">
         <div class="col1" style="height:275px; overflow-x: scroll">
             <table class="table table-hover">
-                <thead class="bg-success">
+                <thead class="bg-secondary">
                 <tr>
                     <th>Customer ID</th>
                     <th>Customer Name</th>
@@ -102,25 +144,27 @@
                     <th>Phone number</th>
                 </tr>
                 </thead>
-                <tbody id="orderTableP"></tbody>
-                <tr>
-                    <th scope="row">C001</th>
-                    <td>Nishadi</td>
-                    <td>Negombo</td>
-                    <td>0763529130</td>
-                </tr>
-                <tr>
-                    <th scope="row">C002</th>
-                    <td>Nishadi</td>
-                    <td>Negombo</td>
-                    <td>0763529130</td>
-                </tr>
+                <tbody id="tblCustomer"></tbody>
+                <!--                <tr>-->
+                <!--                    <th scope="row">C001</th>-->
+                <!--                    <td>dilshan</td>-->
+                <!--                    <td>gampaha</td>-->
+                <!--                    <td>0772759120</td>-->
+                <!--                </tr>-->
+                <!--                <tr>-->
+                <!--                    <th scope="row">C002</th>-->
+                <!--                    <td>dilshan</td>-->
+                <!--                    <td>gampaha</td>-->
+                <!--                    <td>0772759120</td>-->
+                <!--                </tr>-->
 
             </table>
         </div>
     </section>
 </section>
-<!--Item-->
+
+
+<!--item-->
 <section class="container-fluid mt-3" id="itemContent">
 
     <section class="row mt-3 justify-content-around">
@@ -129,7 +173,7 @@
                 <h1 class="h1 mb-3">Item Manage</h1>
                 <div class="mb-3">
                     <label class="form-label" for="txtSearchItemID">Search Item</label>
-                    <input class="form-control" id="txtSearchItemID" placeholder="Item-id" type="text">
+                    <input class="form-control" id="txtSearchItemID" placeholder="Item-code" type="text">
                 </div>
                 <button class="btn btn-primary" id="btnSearchItem">Search</button>
 
@@ -137,26 +181,32 @@
         </div>
         <div class="col-12 col-md-5">
             <div class="mb-3">
-                <label class="form-label" for="txtItemCodeP">Item Code</label>
-                <input class="form-control" id="txtItemCodeP" placeholder="Item Code" type="text">
+                <label class="form-label" for="txtItemCode">Item Code</label>
+                <input class="form-control" id="txtItemCode" placeholder="Item Code" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="txtItemNameP">Item Name</label>
-                <input class="form-control" id="txtItemNameP" placeholder="Item Name" type="text">
+                <label class="form-label" for="txtItemName">Item Name</label>
+                <input class="form-control" id="txtItemName" placeholder="Item Name" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemQty">Item Qty</label>
                 <input class="form-control" id="txtItemQty" placeholder="Item Qty" type="text">
+                <span class="control-error"></span>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="txtItemPrice">Item Price</label>
                 <input class="form-control" id="txtItemPrice" placeholder="Item Price" type="text">
+                <span class="control-error"></span>
             </div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-primary me-md-2" id="btnSaveItem">Save</button>
                 <button class="btn btn-success me-md-2" id="btnUpdateItem">Update</button>
                 <button class="btn btn-danger me-md-2" id="btnDeleteItem">Delete</button>
+                <button class="btn bg-warning me-md-2" id="btnClearItem">Clear</button>
+
             </div>
 
         </div>
@@ -164,7 +214,7 @@
     <section class="row mt-4">
         <div class="col" style="height:275px; overflow-x: scroll">
             <table class="table table-hover">
-                <thead class="bg-success ">
+                <thead class="bg-secondary ">
                 <tr>
                     <th>Item Code</th>
                     <th>Item Name</th>
@@ -174,23 +224,24 @@
                 </thead>
                 <tbody id="ItemTable"></tbody>
 
-                <tr>
-                    <th scope="row">T001</th>
-                    <td>Nishadi</td>
-                    <td>Negombo</td>
-                    <td>0763529130</td>
-                </tr>
-                <tr>
-                    <th scope="row">T002</th>
-                    <td>Kamal</td>
-                    <td>Galle</td>
-                    <td>0773456770</td>
-                </tr>
+                <!-- <tr>
+                     <th scope="row">T001</th>
+                     <td>dilshan</td>
+                     <td>gampaha</td>
+                     <td>0772759120</td>
+                 </tr>
+                 <tr>
+                     <th scope="row">T002</th>
+                     <td>dilshan</td>
+                     <td>gampaha</td>
+                     <td>0772759120</td>
+                 </tr>-->
 
             </table>
         </div>
     </section>
 </section>
+
 
 <!--place Order-->
 <section class="container-fluid mt-3" id="orderContent">
@@ -199,7 +250,7 @@
             <div class="row">
                 <div class="col-lg-4 mt-2">
                     <div class="card">
-                        <div class="card-header bg-success font-weight-bolder">Details
+                        <div class="card-header bg-secondary font-weight-bolder">Details
                             <button type="button" class="btn btn-primary btn-sm btn-block float-end " id="btnNew">
                                 <i class="fas fa-plus-square"></i>
                                 New
@@ -209,7 +260,7 @@
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label" for="orderId">Order Id:</label>
-                                    <input class="form-control" id="orderId" placeholder="O-001" type="text">
+                                    <input class="form-control" id="orderId" placeholder="O-001" type="text" disabled>
                                 </div>
                                 <div class="col">
                                     <label class="form-label" for="orderDate">Date:</label>
@@ -217,24 +268,24 @@
                                 </div>
                             </div>
                             <div class="col-md-5">
-                                <label for="inputCustomer" class="form-label">Customer:</label>
-                                <select id="inputCustomer" class="form-select">
-                                    <option selected>Id</option>
+                                <label for="selectCustomerId" class="form-label">Customer ID:</label>
+                                <select id="selectCustomerId" class="form-select">
+                                    <option selected>customer Id</option>
                                     <option>...</option>
                                 </select>
                             </div>
 
                             <div>
                                 <label class="form-label" for="txtName">Name:</label>
-                                <input class="form-control" id="txtName" type="text">
+                                <input class="form-control" id="txtName" type="text" disabled>
                             </div>
                             <div>
                                 <label class="form-label" for="txtContact">Contact:</label>
-                                <input class="form-control" id="txtContact" type="text">
+                                <input class="form-control" id="txtContact" type="text" disabled>
                             </div>
                             <div>
                                 <label class="form-label" for="txtAddress">Address:</label>
-                                <input class="form-control" id="txtAddress" type="text">
+                                <input class="form-control" id="txtAddress" type="text" disabled>
                             </div>
 
                         </div>
@@ -242,42 +293,48 @@
                 </div>
                 <div class="col-lg-4 mt-2">
                     <div class="card">
-                        <div class="card-header bg-success font-weight-bolder">Item</div>
+                        <div class="card-header bg-secondary font-weight-bolder">Item</div>
                         <div class="card-body">
                             <div class="col-md-5">
-                                <label class="form-label" for="txtItemCode">Item Code:</label>
-                                <input class="form-control" id="txtItemCode" type="text">
+                                <label class="form-label" for="selectItemCode">Item Code:</label>
+                                <select id="selectItemCode" class="form-select">
+                                    <option selected>Item code</option>
+                                    <option>...</option>
+                                </select>
                             </div>
-                            <div class="mt-3">
-                                <label class="form-label" for="txtItemName">Item Name:</label>
-                                <input class="form-control" id="txtItemName" type="text">
+                            <!-- <div class="mt-3">
+                                 <label class="form-label" for="txtItemName">Item Name:</label>
+                                 <input class="form-control" id="txtOrderItemName" type="text" disabled>
+                             </div>-->
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label" for="txtOrderItemName">Item Name:</label>
+                                    <input class="form-control" id="txtOrderItemName" type="text" disabled>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label" for="qtyOnH">QtyOnH :</label>
+                                    <input class="form-control" id="qtyOnH" type="text" disabled>
+                                </div>
                             </div>
+
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label" for="price">price:</label>
-                                    <input class="form-control" id="price" type="text">
+                                    <input class="form-control" id="price" type="text" disabled>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label" for="qty">Qty:</label>
-                                    <input class="form-control" id="qty" type="text">
+                                    <label class="form-label" for="OrderQty">Order Qty:</label>
+                                    <input class="form-control" id="OrderQty" type="text">
                                 </div>
                             </div>
 
                             <div class="row ">
                                 <div class="col ">
                                     <button type="button"
-                                            class="btn btn-primary position-absolute mt-2"
+                                            class="btn btn-primary mt-2"
                                             id="btnAdd">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                         Add
-                                    </button>
-                                </div>
-                                <div class="col">
-                                    <button type="button"
-                                            class="btn btn-danger mt-2"
-                                            id="btnDelete">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                        Delete
                                     </button>
                                 </div>
                             </div>
@@ -303,12 +360,13 @@
                             </div>
 
                             <div>
-                                <label class="form-label" for="txtDiscount">Discount:</label>
-                                <input class="form-control" id="txtDiscount" type="text">
-                            </div>
-                            <div>
                                 <label class="form-label" for="txtCash">Cash:</label>
                                 <input class="form-control" id="txtCash" type="text">
+                            </div>
+
+                            <div>
+                                <label class="form-label" for="txtDiscount">Discount:</label>
+                                <input class="form-control" id="txtDiscount" type="text" placeholder="0%">
                             </div>
                             <div>
                                 <label class="form-label" for="txtChange">Change:</label>
@@ -333,28 +391,32 @@
         <section class="row mt-4 ">
             <div class="col" style="height:275px; overflow-x: scroll">
                 <table class="table table-hover">
-                    <thead class="bg-success">
+                    <thead class="bg-secondary">
                     <tr>
-                        <th>Order ID</th>
                         <th>Item Code</th>
                         <th>Item Name</th>
                         <th>Qty</th>
-                        <th>Per-Rs</th>
+                        <th>Unit-price</th>
                         <th>Total</th>
+                        <th>delete</th>
                     </tr>
                     </thead>
-                    <tbody id="customerTableP"></tbody>
-
-
+                    <tbody id="orderTable"></tbody>
                 </table>
             </div>
         </section>
     </div>
 </section>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-<script src ="./controller/dashboardController.js"></script>
+<script src="./assests/js/jquery-3.6.1.min.js"></script>
+<script src="db/DB.js"></script>
+<script src="controller/DashBoardController.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
 </body>
 </html>
