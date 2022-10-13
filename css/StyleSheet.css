@@ -106,6 +106,7 @@ nav > ul > li > a:hover {
     position: absolute;
     justify-content: end;
     margin-left: 35%;
+    top: 30%;
 }
 
 .main-text > div {
