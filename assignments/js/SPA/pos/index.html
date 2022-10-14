@@ -250,7 +250,7 @@
             <div class="row">
                 <div class="col-lg-4 mt-2">
                     <div class="card">
-                        <div class="card-header bg-success font-weight-bolder">Details
+                        <div class="card-header bg-secondary font-weight-bolder">Details
                             <button type="button" class="btn btn-primary btn-sm btn-block float-end " id="btnNew">
                                 <i class="fas fa-plus-square"></i>
                                 New
@@ -260,7 +260,8 @@
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label" for="orderId">Order Id:</label>
-                                    <input class="form-control" id="orderId" placeholder="O-001" type="text" disabled>
+                                    <input class="form-control" id="orderId" placeholder="O-001" type="text">
+                                    <span class="control-error" id="oidSpan"></span>
                                 </div>
                                 <div class="col">
                                     <label class="form-label" for="orderDate">Date:</label>
@@ -293,7 +294,7 @@
                 </div>
                 <div class="col-lg-4 mt-2">
                     <div class="card">
-                        <div class="card-header bg-success font-weight-bolder">Item</div>
+                        <div class="card-header bg-secondary font-weight-bolder">Item</div>
                         <div class="card-body">
                             <div class="col-md-5">
                                 <label class="form-label" for="selectItemCode">Item Code:</label>
@@ -324,7 +325,7 @@
                                 </div>
                                 <div class="col">
                                     <label class="form-label" for="OrderQty">Order Qty:</label>
-                                    <input class="form-control" id="OrderQty" type="text">
+                                    <input class="form-control" id="OrderQty" type="number" autocomplete="off">
                                 </div>
                             </div>
 
@@ -345,32 +346,31 @@
                     <div class="card">
                         <div class="card-body">
                             <div>
-                                <label class="form-label text-primary" for="txtItemName">Total:</label>
+                                <label class="form-label text-primary">Total (Rs):</label>
                             </div>
                             <div>
-                                <label class="form-label text-primary fs-5 text fw-bold"
-                                       for="txtItemName">Rs.00.00</label>
+                                <label class="form-label text-primary fs-5 text fw-bold" id="orderTot">Rs.00.00</label>
                             </div>
                             <div>
-                                <label class="form-label text-danger" for="txtItemName">SubTotal:</label>
+                                <label class="form-label text-danger">SubTotal (Rs):</label>
                             </div>
                             <div>
                                 <label class="form-label text-danger fs-5 text fw-bold"
-                                       for="txtItemName">Rs.00.00</label>
+                                       id="oSubTot">Rs.00.00</label>
                             </div>
 
                             <div>
                                 <label class="form-label" for="txtCash">Cash:</label>
-                                <input class="form-control" id="txtCash" type="text">
+                                <input class="form-control" id="txtCash" type="number">
                             </div>
 
                             <div>
                                 <label class="form-label" for="txtDiscount">Discount:</label>
-                                <input class="form-control" id="txtDiscount" type="text" placeholder="0%">
+                                <input class="form-control" id="txtDiscount" placeholder="0%" type="number">
                             </div>
                             <div>
-                                <label class="form-label" for="txtChange">Change:</label>
-                                <input class="form-control" id="txtChange" type="text">
+                                <label class="form-label" for="txtBalance">Balance (Rs):</label>
+                                <input class="form-control" id="txtBalance" type="text" disabled>
                             </div>
                             <div class="col  mt-3">
                                 <button type="button"
@@ -391,14 +391,13 @@
         <section class="row mt-4 ">
             <div class="col" style="height:275px; overflow-x: scroll">
                 <table class="table table-hover">
-                    <thead class="bg-success">
+                    <thead class="bg-secondary">
                     <tr>
                         <th>Item Code</th>
                         <th>Item Name</th>
                         <th>Qty</th>
                         <th>Unit-price</th>
-                        <th>Total</th>
-                        <th>delete</th>
+                        <th>Total(Rs)</th>
                     </tr>
                     </thead>
                     <tbody id="orderTable"></tbody>
