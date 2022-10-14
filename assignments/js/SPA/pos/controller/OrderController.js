@@ -49,4 +49,54 @@ $('#selectItemCode').click(function () {
 
     qtyOnHandCheck();
 });
+$('#btnAdd').click(function () {
+    let oId = $('#orderId').val();
+    let orderItemCode = $("#selectItemCode").val();
+    let orderItemName = $("#txtOrderItemName").val();
+    let orderItemQty = $("#OrderQty").val();
+    let orderItemUnitPrice = $("#price").val();
+    let orderItemTotal = orderItemQty * orderItemUnitPrice;
 
+    var order = {
+        "orderId": oId,
+        "orderCode": orderItemCode,
+        "orderName": orderItemName,
+        "orderQty": orderItemQty,
+        "orderUnitPrice": orderItemUnitPrice,
+        "orderTotal": orderItemTotal
+    }
+
+    if ($('#qtyOnH').val() == 0) {
+        $('#btnAdd').attr('disabled', true);
+    } else {
+        $('#btnAdd').attr('disabled', false);
+    }
+
+    if ($("#price").val().length <= 0) {
+        $('#selectItemCode').focus();
+    } else if (orderItemQty == 0) {
+        $('#OrderQty').focus();
+    } else {
+        let i = searchOrderItem(orderItemCode);
+
+        if (i != null) {
+
+            let qty = parseInt(i.orderQty);
+            let tot = parseInt(i.orderTotal);
+
+            qty = qty + parseInt(orderItemQty);
+            tot = tot + parseInt(orderItemTotal);
+
+            i.orderQty = qty;
+            i.orderTotal = tot;
+            loadOrder();
+            totalCount();
+        } else {
+            orders.push(order);
+            loadOrder();
+            totalCount();
+        }
+
+
+    }
+});
