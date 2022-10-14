@@ -100,3 +100,87 @@ $('#btnAdd').click(function () {
 
     }
 });
+$('#btnPurchase').click(function () {
+
+    if ($('#orderDate').val() == "") {
+        $('#orderDate').focus();
+    } else if ($('#txtName').val().length <= 0) {
+        $('#selectCustomerId').focus();
+    } else if ($('#txtCash').val().length <= 0) {
+        $('#txtCash').focus();
+    } else if ($('#txtDiscount').val().length <= 0) {
+        $('#txtDiscount').focus();
+    } else {
+        alert("order purchase success")
+        purchase();
+        balanceOrder();
+        loadOrder();
+        itemCountSet();
+        copyArray();
+    }
+});
+
+function copyArray() {
+    for (let i = 0; i < orders.length; i++) {
+        order = {
+            "orderId": orders[i].orderId,
+            "orderCode": orders[i].orderCode,
+            "orderName": orders[i].orderName,
+            "orderQty": orders[i].orderQty,
+            "orderUnitPrice": orders[i].orderUnitPrice,
+            "orderTotal": orders[i].orderTotal
+        }
+        allDetails.push(order);
+    }
+}
+
+$('#btnNew').click(function () {
+    newOrder();
+});
+
+function qtyOnHandCheck() {
+    let qoh = $('#qtyOnH').val();
+    if (qoh == 0) {
+        $("#btnAdd").attr('disabled', true);
+    } else {
+        $("#btnAdd").attr('disabled', false);
+    }
+}
+
+function newOrder() {
+    generateOrderId();
+
+    $('#selectCustomerId').val(" ");
+    $('#txtName').val(" ");
+    $('#txtContact').val(" ");
+    $('#txtAddress').val(" ");
+    $('#selectItemCode').val(" ");
+    $('#txtOrderItemName').val(" ");
+    $('#qtyOnH').val(" ");
+    $('#price').val(" ");
+    $('#OrderQty').val(" ");
+
+    $('#orderTot').text(" ");
+    $('#oSubTot').text(" ");
+    $('#txtCash').val(" ");
+    $('#txtDiscount').val(" ");
+    $('#txtBalance').val(" ");
+
+    $('#orderDate').val(" ");
+
+    orders.length = 0;
+    loadOrder();
+}
+
+function totalCount() {
+    let tot = 0;
+    if (orders.length == 0) {
+        $('#orderTot').text(" ");
+    } else {
+        for (let i = 0; i < orders.length; i++) {
+            tot = tot + orders[i].orderTotal.valueOf();
+            $('#orderTot').text(tot);
+        }
+    }
+}
+
