@@ -25,3 +25,28 @@ function itemCodeOption() {
         $('#selectItemCode').append(`<option>${item.code}</option>`)
     }
 }
+/*customer detail load*/
+$('#selectCustomerId').click(function () {
+    let cusId = $('#selectCustomerId').val();
+
+    let customer = searchCustomer(cusId);
+    $('#txtName').val(customer.name);
+    $('#txtAddress').val(customer.address);
+    $('#txtContact').val(customer.number);
+
+});
+
+/*item detail load*/
+$('#selectItemCode').click(function () {
+    let code = $('#selectItemCode').val();
+    let item = searchItem(code);
+
+    $('#txtOrderItemName').val(item.itemName);
+    $('#qtyOnH').val(item.itemQty);
+    $('#price').val(item.price);
+
+    $('#OrderQty').val(" ");
+
+    qtyOnHandCheck();
+});
+
