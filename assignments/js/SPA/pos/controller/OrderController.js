@@ -10,3 +10,18 @@ function generateOrderId() {
         $("#orderId").val("O-001");
     }
 }
+/*customer id load*/
+function customerIdOption() {
+    $('#selectCustomerId').empty();
+    for (let cus of customers) {
+        $('#selectCustomerId').append(`<option>${cus.id}</option>`)
+    }
+}
+
+/*item code load*/
+function itemCodeOption() {
+    $('#selectItemCode').empty();
+    for (let item of items) {
+        $('#selectItemCode').append(`<option>${item.code}</option>`)
+    }
+}
