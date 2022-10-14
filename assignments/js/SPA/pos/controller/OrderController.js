@@ -262,5 +262,85 @@ function bindDeleteEvent() {
         /* $(this).remove();*/
     });
 }
+function deleteObject(code) {
+    let Item = searchOrderItem(code);
+    if (Item != null) {
+        let indexNumber = orders.indexOf(Item);
+        orders.splice(indexNumber, 1);
+        totalCount();
+        return true;
+    } else {
+        return false;
+    }
+}
 
+function itemCountSet() {
+    for (let i = 0; i < orders.length; i++) {
+        for (let j = 0; j < items.length; j++) {
+            if (orders[i].orderCode == items[j].code) {
+                let uQty = parseInt(items[j].itemQty);
+                let oQty = parseInt(orders[i].orderQty);
+                uQty = uQty - oQty;
+                items[j].itemQty = uQty;
+            }
+        }
+    }
+}
+
+const oIDRegEx = /^(O-)[0-9]{1,3}$/;
+
+$('#orderId').on('keydown', function (event) {
+
+    if (checkOId(oIDRegEx, $('#orderId'))) {
+        $('#oidSpan').css('border', '1px solid #ced4da');
+        $('#oidSpan').text(" ");
+
+        if (event.key == "Enter") {
+            let Oid = $('#orderId').val();
+
+            allOrderSearch(Oid);
+            loadOrder();
+            setCustomer(Oid);
+        }
+    } else {
+        $('#oidSpan').css('border', '2px solid red');
+        $('#oidSpan').text("Order ID Pattern is Wrong : O-001");
+    }
+});
+
+function checkOId(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+/*order search*/
+function allOrderSearch(Id) {
+    orders.length = 0;
+    for (let i=0;i<allDetails.length;i++){
+
+        if (Id==allDetails[i].orderId){
+            let order=allDetails[i];
+            orders.push(order);
+        }else {
+            alert("Wrong order ID");
+        }
+
+    }
+}
+
+/*customer order name set*/
+function setCustomer(Oid) {
+    for (let i=0;i<orderDetails.length;i++){
+        if (Oid == orderDetails[i].oId){
+            let id =orderDetails[i].cusId;
+            let customer = searchCustomer(id);
+            $('#txtName').val(customer.name);
+            $('#txtAddress').val(customer.address);
+            $('#txtContact').val(customer.number);
+            $('#selectCustomerId').val(id);
+            $('#orderDate').val(orderDetails[i].date);
+            $('#orderTot').text(orderDetails[i].total);
+        }
+    }
+}
 
