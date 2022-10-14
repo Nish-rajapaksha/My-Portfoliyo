@@ -183,4 +183,84 @@ function totalCount() {
         }
     }
 }
+function purchase() {
+    let oId = $('#orderId').val();
+    let cusId = $('#selectCustomerId').val();
+    let date = $('#orderDate').val();
+    let total = $('#orderTot').text();
+
+    var oDetails = {
+        "oId": oId,
+        "cusId": cusId,
+        "date": date,
+        "total": total
+    }
+
+    orderDetails.push(oDetails);
+
+}
+
+function balanceOrder() {
+    var t = parseInt($('#orderTot').text());
+    let cash = parseInt($('#txtCash').val());
+    let discount = parseInt($('#txtDiscount').val());
+
+    let z = t * discount / 100;
+
+    t = t - z;
+    $('#oSubTot').text(t);
+    $('#txtBalance').val(cash - t);
+}
+
+/*add button event focus*/
+$('#OrderQty').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#btnAdd').focus();
+    }
+});
+
+$('#txtCash').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#txtDiscount').focus();
+    }
+});
+
+$('#txtDiscount').on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $('#btnPurchase').focus();
+    }
+});
+
+function defaultFocus() {
+    $('#selectCustomerId').focus();
+}
+
+function loadOrder() {
+    $("#orderTable").empty();
+    for (var order of orders) {
+        var row = `<tr><td>${order.orderCode}</td><td>${order.orderName}</td><td>${order.orderQty}</td><td>${order.orderUnitPrice}</td><td>${order.orderTotal}</td></tr>`;
+        $("#orderTable").append(row);
+    }
+    bindDeleteEvent();
+}
+
+function searchOrderItem(code) {
+    for (let order of orders) {
+        if (order.orderCode == code) {
+            return order;
+        }
+    }
+    return null;
+}
+
+function bindDeleteEvent() {
+    $('#orderTable>tr').on('dblclick', function () {
+        let code = $(this).children(":eq(0)").text();
+        deleteObject(code);
+        console.log(code);
+        loadOrder();
+        /* $(this).remove();*/
+    });
+}
+
 
