@@ -15,4 +15,4 @@ https://www.figma.com/file/BKrc1N7YcIglZpsaCfmkUy/My-Profile?node-id=0%3A1
 
 
 Bulding with Git hub & InfinityFree
-Git hub url :
+Git hub url : https://github.com/Nish-rajapaksha/My-Portfoliyo.git
