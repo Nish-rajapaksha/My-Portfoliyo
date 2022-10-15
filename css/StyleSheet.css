@@ -333,7 +333,7 @@ nav > ul > li > a:hover {
 /* end goal part css */
 #endGoal {
     height: 100vh;
-    border: 6px solid black;
+    border: 8px solid black;
     position: relative;
     display: flex;
 }
